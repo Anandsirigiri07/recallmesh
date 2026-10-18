@@ -34,7 +34,10 @@ CORS_ORIGINS: List[str] = [
     "http://127.0.0.1:5173",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://recallmesh-one.vercel.app",
+    "https://recallmesh-i14bmyxz6-anandsirigiri2006-1649s-projects.vercel.app",
 ]
+
 
 # Read optional comma-separated CORS_ALLOWED_ORIGINS from environment (e.g., https://recallmesh.vercel.app)
 _env_origins = os.getenv("CORS_ALLOWED_ORIGINS")
