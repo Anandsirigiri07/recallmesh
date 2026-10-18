@@ -1,0 +1,45 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+secrets.json
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Node / Frontend dependencies and builds
+node_modules/
+dist/
+build/
+.npm/
+
+# Logs and system artifacts
+*.log
+.DS_Store
+Thumbs.db
+
+# Raw datasets and temporary download artifacts
+data/raw/
+data/prepared/
+data/evidence_uploads/
+uploads/
+scratch/
+*.zip
+*.tar.gz
+

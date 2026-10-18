@@ -1,0 +1,81 @@
+/**
+ * Serene Traceability Design Tokens
+ * Google Stitch UI Export Authoritative Specification
+ * Reference: design-reference/stitch_recallmesh_food_traceability_platform/serene_traceability/DESIGN.md
+ */
+
+:root {
+  /* Canvas Substrate & Surfaces */
+  --color-canvas-bg: #FAF6EC;           /* Warm archival parchment */
+  --color-surface-card: #FFFFFF;         /* Pure white container surface */
+  --color-surface-low: #E6F7F1;          /* Container low */
+  --color-surface-container: #E0F2EB;    /* Container hover/selection */
+  --color-surface-high: #DBECE6;         /* Container high */
+  --color-surface-highest: #D5E6E0;      /* Container highest */
+  --color-surface-dim: #CDDED8;          /* Surface dim */
+
+  /* Text & Contrast */
+  --color-text-primary: #24332F;         /* Deep spruce black (high contrast) */
+  --color-text-secondary: #69736E;       /* Muted lichen slate */
+  --color-text-on-primary: #FFFFFF;      /* Text on primary filled controls */
+  --color-text-on-dark: #FFFFFF;
+
+  /* Primary Brand Accent (Teal / Sage) */
+  --color-primary: #337A68;              /* Deep teal green */
+  --color-primary-hover: #2B6758;        /* Hover teal */
+  --color-primary-active: #245447;       /* Active pressed */
+  --color-primary-dark: #136150;         /* Primary container header */
+  --color-primary-tint: rgba(51, 122, 104, 0.12);
+
+  /* Borders & Dividers */
+  --color-border: #E7E3D9;               /* Hairline border framing token */
+  --color-border-subtle: #BEC9C4;        /* Subtle outline variant */
+
+  /* Status Tokens & 12% Lineage Tints */
+  /* 1. Affected Path (Contaminated / Direct Blast Radius) */
+  --color-status-affected-solid: #E77861;
+  --color-status-affected-tint: rgba(231, 120, 97, 0.12);
+  --color-status-affected-text: #B34732;
+
+  /* 2. Record Verified (Certified Clean / Normal Lineage) */
+  --color-status-verified-solid: #579779;
+  --color-status-verified-tint: rgba(87, 151, 121, 0.12);
+  --color-status-verified-text: #34654F;
+
+  /* 3. Needs Review (Pending Action / Interrupted CTE) */
+  --color-status-review-solid: #D9A638;
+  --color-status-review-tint: rgba(217, 166, 56, 0.15);
+  --color-status-review-text: #8F6617;
+
+  /* 4. Unknown Link (Gap Detected / Missing Link / Unconfirmed) */
+  --color-status-unknown-solid: #9682CE;
+  --color-status-unknown-tint: rgba(150, 130, 206, 0.15);
+  --color-status-unknown-text: #5F4B96;
+
+  /* Typography */
+  --font-family-base: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Dimensions & Spacing */
+  --sidebar-width: 240px;
+  --header-height: 64px;
+  --max-content-width: 1440px;
+  
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 2.5rem;   /* 40px */
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;       /* 12px (Stitch Card & Input default) */
+  --radius-full: 9999px;   /* Pills & Badges */
+
+  /* Shadows (Subtle, low-opacity, no neon/glassmorphism) */
+  --shadow-card: 0 1px 3px rgba(36, 51, 47, 0.03);
+  --shadow-elevated: 0 4px 16px rgba(36, 51, 47, 0.06);
+  --shadow-modal: 0 12px 32px rgba(36, 51, 47, 0.12);
+}

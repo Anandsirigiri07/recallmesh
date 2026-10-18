@@ -1,0 +1,351 @@
+{
+  "timestamp_utc": "2026-10-16T09:42:26.629321+00:00",
+  "evaluation_protocol_audit": {
+    "chronological_test_split": "Past-to-future evaluation (Sep 2023 - Sep 2026), 0 event/cluster overlap, natural commercial firm recurrence (13.8% firm overlap).",
+    "unseen_firm_split": "Firm-disjoint cross-firm evaluation across whole timeline (2008 - 2026). NOT chronological. Cannot be directly compared with future forecasting.",
+    "retrospective_task_limitation": "openFDA dataset records finalized post-incident enforcement summaries. It reflects retrospective classification, not minute-0 prospective factory floor triage."
+  },
+  "baseline_reproduction": {
+    "model": "TF-IDF + Multinomial Logistic Regression (C=1.0)",
+    "test_accuracy": 0.6466,
+    "test_macro_f1": 0.56,
+    "test_balanced_accuracy": 0.5737,
+    "test_class_i_recall": 0.7488
+  },
+  "experiment_a_three_class_improved": {
+    "model": "TF-IDF (1,2 ngrams) + Transparent Hazard Indicators + Logistic Regression (C=0.5, balanced)",
+    "validation_eval": {
+      "sample_count": 4404,
+      "overall_accuracy": 0.6855,
+      "macro_f1": 0.5589,
+      "weighted_f1": 0.6968,
+      "balanced_accuracy": 0.5758,
+      "per_class": {
+        "Class I": {
+          "precision": 0.8013,
+          "recall": 0.7793,
+          "f1_score": 0.7901,
+          "support": 2220,
+          "prevalence_pct": 50.41
+        },
+        "Class II": {
+          "precision": 0.6853,
+          "recall": 0.6303,
+          "f1_score": 0.6566,
+          "support": 1904,
+          "prevalence_pct": 43.23
+        },
+        "Class III": {
+          "precision": 0.1802,
+          "recall": 0.3179,
+          "f1_score": 0.23,
+          "support": 280,
+          "prevalence_pct": 6.36
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Class I",
+          "Class II",
+          "Class III"
+        ],
+        "matrix": [
+          [
+            1730,
+            409,
+            81
+          ],
+          [
+            380,
+            1200,
+            324
+          ],
+          [
+            49,
+            142,
+            89
+          ]
+        ]
+      },
+      "majority_class_baseline": {
+        "majority_class": "Class I",
+        "baseline_accuracy": 0.5041,
+        "accuracy_lift": 0.1814
+      },
+      "target_comparison": {
+        "aspiration_accuracy": 0.9,
+        "achieved_accuracy": 0.6855,
+        "target_achieved": false,
+        "gap_to_target": 0.2145
+      }
+    },
+    "locked_test_eval": {
+      "sample_count": 4403,
+      "overall_accuracy": 0.6655,
+      "macro_f1": 0.5818,
+      "weighted_f1": 0.6693,
+      "balanced_accuracy": 0.6135,
+      "per_class": {
+        "Class I": {
+          "precision": 0.7097,
+          "recall": 0.7975,
+          "f1_score": 0.751,
+          "support": 1931,
+          "prevalence_pct": 43.86
+        },
+        "Class II": {
+          "precision": 0.7256,
+          "recall": 0.5763,
+          "f1_score": 0.6424,
+          "support": 2157,
+          "prevalence_pct": 48.99
+        },
+        "Class III": {
+          "precision": 0.2827,
+          "recall": 0.4667,
+          "f1_score": 0.3521,
+          "support": 315,
+          "prevalence_pct": 7.15
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Class I",
+          "Class II",
+          "Class III"
+        ],
+        "matrix": [
+          [
+            1540,
+            310,
+            81
+          ],
+          [
+            622,
+            1243,
+            292
+          ],
+          [
+            8,
+            160,
+            147
+          ]
+        ]
+      },
+      "majority_class_baseline": {
+        "majority_class": "Class II",
+        "baseline_accuracy": 0.4899,
+        "accuracy_lift": 0.1756
+      },
+      "target_comparison": {
+        "aspiration_accuracy": 0.9,
+        "achieved_accuracy": 0.6655,
+        "target_achieved": false,
+        "gap_to_target": 0.2345
+      }
+    },
+    "delta_vs_baseline_acc": 0.0189,
+    "delta_vs_baseline_macro_f1": 0.0218,
+    "delta_vs_baseline_c1_recall": 0.0487
+  },
+  "experiment_c_binary_high_severity": {
+    "model": "TF-IDF (1,2 ngrams) + Transparent Hazard Indicators + Binary Logistic Regression (C=0.5, balanced)",
+    "tuned_validation_threshold": 0.43,
+    "validation_eval_default_thresh": {
+      "sample_count": 4404,
+      "class_i_count": 2220,
+      "non_class_i_count": 2184,
+      "threshold_applied": 0.5,
+      "overall_accuracy": 0.7947,
+      "macro_f1": 0.7947,
+      "weighted_f1": 0.7947,
+      "balanced_accuracy": 0.7948,
+      "roc_auc": 0.8744,
+      "pr_auc": 0.8634,
+      "class_i_metrics": {
+        "precision": 0.8038,
+        "recall": 0.7842,
+        "f1_score": 0.7939,
+        "support": 2220,
+        "prevalence_pct": 50.41
+      },
+      "non_class_i_metrics": {
+        "precision": 0.786,
+        "recall": 0.8054,
+        "f1_score": 0.7956,
+        "support": 2184,
+        "prevalence_pct": 49.59
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Non-Class I (Class II/III)",
+          "Class I"
+        ],
+        "matrix": [
+          [
+            1759,
+            425
+          ],
+          [
+            479,
+            1741
+          ]
+        ]
+      },
+      "majority_class_baseline": {
+        "majority_class": "Class I",
+        "baseline_accuracy": 0.5041,
+        "accuracy_lift": 0.2906
+      }
+    },
+    "validation_eval_tuned_thresh": {
+      "sample_count": 4404,
+      "class_i_count": 2220,
+      "non_class_i_count": 2184,
+      "threshold_applied": 0.43,
+      "overall_accuracy": 0.8,
+      "macro_f1": 0.7995,
+      "weighted_f1": 0.7996,
+      "balanced_accuracy": 0.7996,
+      "roc_auc": 0.8744,
+      "pr_auc": 0.8634,
+      "class_i_metrics": {
+        "precision": 0.7807,
+        "recall": 0.8387,
+        "f1_score": 0.8087,
+        "support": 2220,
+        "prevalence_pct": 50.41
+      },
+      "non_class_i_metrics": {
+        "precision": 0.8227,
+        "recall": 0.7605,
+        "f1_score": 0.7904,
+        "support": 2184,
+        "prevalence_pct": 49.59
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Non-Class I (Class II/III)",
+          "Class I"
+        ],
+        "matrix": [
+          [
+            1661,
+            523
+          ],
+          [
+            358,
+            1862
+          ]
+        ]
+      },
+      "majority_class_baseline": {
+        "majority_class": "Class I",
+        "baseline_accuracy": 0.5041,
+        "accuracy_lift": 0.2959
+      }
+    },
+    "locked_test_eval_default_thresh": {
+      "sample_count": 4403,
+      "class_i_count": 1931,
+      "non_class_i_count": 2472,
+      "threshold_applied": 0.5,
+      "overall_accuracy": 0.7708,
+      "macro_f1": 0.7702,
+      "weighted_f1": 0.7717,
+      "balanced_accuracy": 0.7759,
+      "roc_auc": 0.8241,
+      "pr_auc": 0.756,
+      "class_i_metrics": {
+        "precision": 0.7065,
+        "recall": 0.8167,
+        "f1_score": 0.7576,
+        "support": 1931,
+        "prevalence_pct": 43.86
+      },
+      "non_class_i_metrics": {
+        "precision": 0.8369,
+        "recall": 0.735,
+        "f1_score": 0.7827,
+        "support": 2472,
+        "prevalence_pct": 56.14
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Non-Class I (Class II/III)",
+          "Class I"
+        ],
+        "matrix": [
+          [
+            1817,
+            655
+          ],
+          [
+            354,
+            1577
+          ]
+        ]
+      },
+      "majority_class_baseline": {
+        "majority_class": "Non-Class I",
+        "baseline_accuracy": 0.5614,
+        "accuracy_lift": 0.2094
+      }
+    },
+    "locked_test_eval_tuned_thresh": {
+      "sample_count": 4403,
+      "class_i_count": 1931,
+      "non_class_i_count": 2472,
+      "threshold_applied": 0.43,
+      "overall_accuracy": 0.7611,
+      "macro_f1": 0.7609,
+      "weighted_f1": 0.7617,
+      "balanced_accuracy": 0.7694,
+      "roc_auc": 0.8241,
+      "pr_auc": 0.756,
+      "class_i_metrics": {
+        "precision": 0.6866,
+        "recall": 0.8374,
+        "f1_score": 0.7545,
+        "support": 1931,
+        "prevalence_pct": 43.86
+      },
+      "non_class_i_metrics": {
+        "precision": 0.8467,
+        "recall": 0.7015,
+        "f1_score": 0.7673,
+        "support": 2472,
+        "prevalence_pct": 56.14
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Non-Class I (Class II/III)",
+          "Class I"
+        ],
+        "matrix": [
+          [
+            1734,
+            738
+          ],
+          [
+            314,
+            1617
+          ]
+        ]
+      },
+      "majority_class_baseline": {
+        "majority_class": "Non-Class I",
+        "baseline_accuracy": 0.5614,
+        "accuracy_lift": 0.1996
+      }
+    },
+    "target_comparison": {
+      "achieved_test_accuracy": 0.7611,
+      "achieved_roc_auc": 0.8241,
+      "achieved_pr_auc": 0.756,
+      "class_i_recall": 0.8374,
+      "majority_baseline_acc": 0.5614,
+      "lift_over_majority": 0.1996
+    }
+  }
+}

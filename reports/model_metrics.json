@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "model_architecture": "TF-IDF + Multinomial Logistic Regression",
+    "trained_at_utc": "2026-10-16T09:24:22.394705+00:00",
+    "source_dataset_sha256": "7f8e2b5bd6e05e0cbf15e43860c74538ad09e1f8b07928e9c92de3ead3dac9c6",
+    "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "features_max": 5000,
+    "feature_ngrams": [
+      1,
+      2
+    ]
+  },
+  "audit_statistics": {
+    "total_raw_records": 29485,
+    "invalid_or_missing_class_records": 2,
+    "missing_text_records": 0,
+    "exact_duplicates_dropped": 136,
+    "retained_prepared_records": 29347,
+    "unique_event_clusters": 7905,
+    "unique_firms": 5526
+  },
+  "split_definitions": {
+    "train_count": 20540,
+    "val_count": 4404,
+    "test_count": 4403,
+    "train_clusters": 5207,
+    "val_clusters": 1194,
+    "test_clusters": 1504,
+    "train_date_range": [
+      "20080222",
+      "20210226"
+    ],
+    "val_date_range": [
+      "20210226",
+      "20230914"
+    ],
+    "test_date_range": [
+      "20230914",
+      "20260924"
+    ]
+  },
+  "split_isolation": {
+    "zero_cluster_leakage": true,
+    "overlap_train_val_count": 0,
+    "overlap_train_test_count": 0,
+    "overlap_val_test_count": 0,
+    "train_min_date": "20080222",
+    "train_max_date": "20210226",
+    "val_min_date": "20210226",
+    "val_max_date": "20230914",
+    "test_min_date": "20230914",
+    "test_max_date": "20260924"
+  },
+  "validation_comparison": {
+    "baseline_logistic_regression": {
+      "sample_count": 4404,
+      "overall_accuracy": 0.6835,
+      "macro_f1": 0.5699,
+      "weighted_f1": 0.6913,
+      "balanced_accuracy": 0.5854,
+      "per_class": {
+        "Class I": {
+          "precision": 0.7903,
+          "recall": 0.7419,
+          "f1_score": 0.7653,
+          "support": 2220,
+          "prevalence_pct": 50.41
+        },
+        "Class II": {
+          "precision": 0.6668,
+          "recall": 0.6644,
+          "f1_score": 0.6656,
+          "support": 1904,
+          "prevalence_pct": 43.23
+        },
+        "Class III": {
+          "precision": 0.2317,
+          "recall": 0.35,
+          "f1_score": 0.2788,
+          "support": 280,
+          "prevalence_pct": 6.36
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Class I",
+          "Class II",
+          "Class III"
+        ],
+        "matrix": [
+          [
+            1647,
+            488,
+            85
+          ],
+          [
+            399,
+            1265,
+            240
+          ],
+          [
+            38,
+            144,
+            98
+          ]
+        ]
+      },
+      "majority_class_baseline": {
+        "majority_class": "Class I",
+        "baseline_accuracy": 0.5041,
+        "accuracy_lift": 0.1794
+      },
+      "target_comparison": {
+        "aspiration_accuracy": 0.9,
+        "achieved_accuracy": 0.6835,
+        "target_achieved": false,
+        "gap_to_target": 0.2165
+      }
+    },
+    "calibrated_linear_svm": {
+      "sample_count": 4404,
+      "overall_accuracy": 0.6971,
+      "macro_f1": 0.4958,
+      "weighted_f1": 0.6787,
+      "balanced_accuracy": 0.5062,
+      "per_class": {
+        "Class I": {
+          "precision": 0.7924,
+          "recall": 0.6928,
+          "f1_score": 0.7392,
+          "support": 2220,
+          "prevalence_pct": 50.41
+        },
+        "Class II": {
+          "precision": 0.6232,
+          "recall": 0.8009,
+          "f1_score": 0.701,
+          "support": 1904,
+          "prevalence_pct": 43.23
+        },
+        "Class III": {
+          "precision": 0.4375,
+          "recall": 0.025,
+          "f1_score": 0.0473,
+          "support": 280,
+          "prevalence_pct": 6.36
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Class I",
+          "Class II",
+          "Class III"
+        ],
+        "matrix": [
+          [
+            1538,
+            682,
+            0
+          ],
+          [
+            370,
+            1525,
+            9
+          ],
+          [
+            33,
+            240,
+            7
+          ]
+        ]
+      },
+      "majority_class_baseline": {
+        "majority_class": "Class I",
+        "baseline_accuracy": 0.5041,
+        "accuracy_lift": 0.193
+      },
+      "target_comparison": {
+        "aspiration_accuracy": 0.9,
+        "achieved_accuracy": 0.6971,
+        "target_achieved": false,
+        "gap_to_target": 0.2029
+      }
+    },
+    "selected_model": "TF-IDF + Multinomial Logistic Regression",
+    "selection_rationale": "Multinomial Logistic Regression achieved superior or equal validation Macro F1 (0.5699 vs 0.4958) with calibrated log-odds interpretability."
+  },
+  "test_evaluation": {
+    "sample_count": 4403,
+    "overall_accuracy": 0.6466,
+    "macro_f1": 0.56,
+    "weighted_f1": 0.648,
+    "balanced_accuracy": 0.5737,
+    "per_class": {
+      "Class I": {
+        "precision": 0.6837,
+        "recall": 0.7488,
+        "f1_score": 0.7148,
+        "support": 1931,
+        "prevalence_pct": 43.86
+      },
+      "Class II": {
+        "precision": 0.6808,
+        "recall": 0.5943,
+        "f1_score": 0.6347,
+        "support": 2157,
+        "prevalence_pct": 48.99
+      },
+      "Class III": {
+        "precision": 0.2938,
+        "recall": 0.3778,
+        "f1_score": 0.3306,
+        "support": 315,
+        "prevalence_pct": 7.15
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "Class I",
+        "Class II",
+        "Class III"
+      ],
+      "matrix": [
+        [
+          1446,
+          421,
+          64
+        ],
+        [
+          653,
+          1282,
+          222
+        ],
+        [
+          16,
+          180,
+          119
+        ]
+      ]
+    },
+    "majority_class_baseline": {
+      "majority_class": "Class II",
+      "baseline_accuracy": 0.4899,
+      "accuracy_lift": 0.1567
+    },
+    "target_comparison": {
+      "aspiration_accuracy": 0.9,
+      "achieved_accuracy": 0.6466,
+      "target_achieved": false,
+      "gap_to_target": 0.2534
+    }
+  },
+  "unseen_firm_evaluation": {
+    "sample_count": 4401,
+    "overall_accuracy": 0.7128,
+    "macro_f1": 0.6746,
+    "weighted_f1": 0.7211,
+    "balanced_accuracy": 0.7372,
+    "per_class": {
+      "Class I": {
+        "precision": 0.7627,
+        "recall": 0.7289,
+        "f1_score": 0.7454,
+        "support": 1693,
+        "prevalence_pct": 38.47
+      },
+      "Class II": {
+        "precision": 0.791,
+        "recall": 0.6861,
+        "f1_score": 0.7348,
+        "support": 2300,
+        "prevalence_pct": 52.26
+      },
+      "Class III": {
+        "precision": 0.4124,
+        "recall": 0.7966,
+        "f1_score": 0.5435,
+        "support": 408,
+        "prevalence_pct": 9.27
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "Class I",
+        "Class II",
+        "Class III"
+      ],
+      "matrix": [
+        [
+          1234,
+          356,
+          103
+        ],
+        [
+          362,
+          1578,
+          360
+        ],
+        [
+          22,
+          61,
+          325
+        ]
+      ]
+    },
+    "majority_class_baseline": {
+      "majority_class": "Class II",
+      "baseline_accuracy": 0.5226,
+      "accuracy_lift": 0.1902
+    },
+    "target_comparison": {
+      "aspiration_accuracy": 0.9,
+      "achieved_accuracy": 0.7128,
+      "target_achieved": false,
+      "gap_to_target": 0.1872
+    }
+  },
+  "error_analysis_samples": [
+    {
+      "event_id": "93088",
+      "recall_number": "F-0297-2024",
+      "recalling_firm": "Tama Corporation",
+      "true_class": "Class I",
+      "predicted_class": "Class II",
+      "confidence": 0.9375,
+      "reason_for_recall": "undeclared allergens wheat soy yellow 5",
+      "product_description": "paisa sweet corn pancakes cachapas de maiz net wt 24 oz 5 units keep refrigerated"
+    },
+    {
+      "event_id": "93151",
+      "recall_number": "F-0293-2024",
+      "recalling_firm": "La Perla Inc",
+      "true_class": "Class I",
+      "predicted_class": "Class II",
+      "confidence": 0.5716,
+      "reason_for_recall": "undeclared allergen - sesame",
+      "product_description": "oasis mediterranean cuisine - thin crunchy sea salt hommus chips packaged in 6oz printed bags 12 bags per case"
+    },
+    {
+      "event_id": "93120",
+      "recall_number": "F-0469-2024",
+      "recalling_firm": "Otis McAllister",
+      "true_class": "Class III",
+      "predicted_class": "Class II",
+      "confidence": 0.7101,
+      "reason_for_recall": "insects rice weevils found in bags of rice",
+      "product_description": "good gather organic jasmine rice 30 oz stand up pouch"
+    },
+    {
+      "event_id": "93143",
+      "recall_number": "F-0736-2024",
+      "recalling_firm": "TreeHouse Foods, Inc.",
+      "true_class": "Class II",
+      "predicted_class": "Class III",
+      "confidence": 0.3851,
+      "reason_for_recall": "potential microbial contamination",
+      "product_description": "reduced sodium chicken broth labeled under winco 32oz reduced sodium chicken broth heb select ingredients 32oz reduced s"
+    },
+    {
+      "event_id": "93143",
+      "recall_number": "F-0728-2024",
+      "recalling_firm": "TreeHouse Foods, Inc.",
+      "true_class": "Class II",
+      "predicted_class": "Class I",
+      "confidence": 0.478,
+      "reason_for_recall": "potential microbial contamination",
+      "product_description": "sprouts 32oz organic low sodium vegetable broth"
+    },
+    {
+      "event_id": "93143",
+      "recall_number": "F-0723-2024",
+      "recalling_firm": "TreeHouse Foods, Inc.",
+      "true_class": "Class II",
+      "predicted_class": "Class I",
+      "confidence": 0.5298,
+      "reason_for_recall": "potential microbial contamination",
+      "product_description": "trader joe s 32oz turkey stock"
+    },
+    {
+      "event_id": "93143",
+      "recall_number": "F-0734-2024",
+      "recalling_firm": "TreeHouse Foods, Inc.",
+      "true_class": "Class II",
+      "predicted_class": "Class I",
+      "confidence": 0.489,
+      "reason_for_recall": "potential microbial contamination",
+      "product_description": "rise brewing 32oz organic oatmilk"
+    },
+    {
+      "event_id": "93143",
+      "recall_number": "F-0727-2024",
+      "recalling_firm": "TreeHouse Foods, Inc.",
+      "true_class": "Class II",
+      "predicted_class": "Class I",
+      "confidence": 0.4407,
+      "reason_for_recall": "potential microbial contamination",
+      "product_description": "organic low reduced sodium chicken broth sold under o organics 32oz organic low sodium chicken broth central market 32oz"
+    },
+    {
+      "event_id": "93157",
+      "recall_number": "F-0320-2024",
+      "recalling_firm": "Kula Brands LLC",
+      "true_class": "Class I",
+      "predicted_class": "Class II",
+      "confidence": 0.5952,
+      "reason_for_recall": "undeclared allergens milk and tree nut coconut and unapproved food additive kratom",
+      "product_description": "kula can pin a colada kratom seltzer 12 oz 355ml dietary supplement"
+    },
+    {
+      "event_id": "93134",
+      "recall_number": "F-0287-2024",
+      "recalling_firm": "Comercializadora Pepsico Mexico,",
+      "true_class": "Class I",
+      "predicted_class": "Class II",
+      "confidence": 0.7042,
+      "reason_for_recall": "undeclared allergen soy",
+      "product_description": "quaker pancakes with whole grain oats net wt 15 97oz 1lb"
+    },
+    {
+      "event_id": "93135",
+      "recall_number": "F-0011-2024",
+      "recalling_firm": "Dick Taylor Inc",
+      "true_class": "Class I",
+      "predicted_class": "Class II",
+      "confidence": 0.8743,
+      "reason_for_recall": "undeclared allergen peanut",
+      "product_description": "ginger snap milk chocolate 2 oz wrapped"
+    },
+    {
+      "event_id": "93169",
+      "recall_number": "F-0459-2024",
+      "recalling_firm": "Paradise Flavors LLC",
+      "true_class": "Class I",
+      "predicted_class": "Class III",
+      "confidence": 0.4772,
+      "reason_for_recall": "undeclared allergen milk undeclared color additives fd c red 5 red 6 blue 1 blue 5 blue 6",
+      "product_description": "orange creamcycle filtered water natural flavoring artificial color citric acid and carboxymethylcellulose paradise flav"
+    },
+    {
+      "event_id": "93169",
+      "recall_number": "F-0450-2024",
+      "recalling_firm": "Paradise Flavors LLC",
+      "true_class": "Class I",
+      "predicted_class": "Class III",
+      "confidence": 0.4157,
+      "reason_for_recall": "undeclared allergen milk undeclared color additives fd c red 5 red 6 red 40 yellow 5",
+      "product_description": "mamey with sweet and condensed milk paradise flavors 4 oz packaged in plastic pouch frozen"
+    },
+    {
+      "event_id": "93169",
+      "recall_number": "F-0452-2024",
+      "recalling_firm": "Paradise Flavors LLC",
+      "true_class": "Class I",
+      "predicted_class": "Class II",
+      "confidence": 0.5058,
+      "reason_for_recall": "undeclared allergens milk tree nuts peanuts and soy undeclared color additives fd c yellow 5 yellow 6 red 40",
+      "product_description": "ezquimal ice-cream base natural flavoring chocolate cover penuts 4 oz distributed by paradise flavors llc packaged in pl"
+    },
+    {
+      "event_id": "93169",
+      "recall_number": "F-0437-2024",
+      "recalling_firm": "Paradise Flavors LLC",
+      "true_class": "Class I",
+      "predicted_class": "Class II",
+      "confidence": 0.465,
+      "reason_for_recall": "undeclared allergen milk undeclared color additives fd c red 40 red 6 red 5 yellow 5",
+      "product_description": "key lime creamsicle filtered water ice-cream base natural flavoring artificial color citric acid and carboxymethylcellul"
+    }
+  ]
+}

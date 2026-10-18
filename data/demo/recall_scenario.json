@@ -1,0 +1,214 @@
+{
+  "scenario_metadata": {
+    "scenario_id": "SCENARIO-VERDANT-01",
+    "name": "Verdant Harvest Foods - Salmonella Spice Contamination & Control Lot Benchmark",
+    "facility_id": "FAC-SALINAS-01",
+    "generated_at": "2026-10-15T08:00:00Z",
+    "fictional_assurance": "100% synthetic demonstration data; no real parties, foods, or labs represented."
+  },
+  "suppliers": [
+    {
+      "supplier_id": "SUP-APEX-01",
+      "name": "Apex Spice Co.",
+      "gln": "0860003138001",
+      "risk_rating": "LOW",
+      "active": true
+    },
+    {
+      "supplier_id": "SUP-SUMMIT-02",
+      "name": "Summit Organics",
+      "gln": "0860003138002",
+      "risk_rating": "LOW",
+      "active": true
+    }
+  ],
+  "ingredients": [
+    {
+      "ingredient_id": "ING-CUMIN-ORG",
+      "common_name": "Organic Ground Cumin",
+      "allergen_flags": [],
+      "ftl_category": "NON_FTL"
+    }
+  ],
+  "raw_lots": [
+    {
+      "lot_code": "LOT-CUM-2026-088",
+      "ingredient_id": "ING-CUMIN-ORG",
+      "supplier_id": "SUP-APEX-01",
+      "received_at": "2026-09-12T08:30:00Z",
+      "quantity_kg": 500.0,
+      "disposition": "QUARANTINED",
+      "traceability_status": "VERIFIED",
+      "notes": "Suspected lot contaminated with Salmonella enterica"
+    },
+    {
+      "lot_code": "LOT-CUM-2026-090",
+      "ingredient_id": "ING-CUMIN-ORG",
+      "supplier_id": "SUP-SUMMIT-02",
+      "received_at": "2026-09-14T09:00:00Z",
+      "quantity_kg": 500.0,
+      "disposition": "AVAILABLE",
+      "traceability_status": "VERIFIED",
+      "notes": "Clean control lot from independent supplier"
+    }
+  ],
+  "production_events": [
+    {
+      "event_id": "PROD-EVT-4401",
+      "facility_id": "FAC-SALINAS-01",
+      "line_id": "LINE-02",
+      "started_at": "2026-10-12T07:00:00Z",
+      "completed_at": "2026-10-12T15:30:00Z",
+      "operator_id": "OP-782",
+      "consumed_raw_lots": ["LOT-CUM-2026-088"]
+    },
+    {
+      "event_id": "PROD-EVT-4402",
+      "facility_id": "FAC-SALINAS-01",
+      "line_id": "LINE-02",
+      "started_at": "2026-10-13T07:00:00Z",
+      "completed_at": "2026-10-13T15:30:00Z",
+      "operator_id": "OP-782",
+      "consumed_raw_lots": ["LOT-CUM-2026-090"]
+    }
+  ],
+  "finished_lots": [
+    {
+      "lot_code": "FL-SALSA-101",
+      "production_event_id": "PROD-EVT-4401",
+      "product_name": "Artisan Roasted Salsa 16oz",
+      "sku": "SKU-SAL-16OZ",
+      "units_produced": 2400,
+      "best_by_date": "2027-03-15",
+      "disposition": "QUARANTINED",
+      "traceability_status": "VERIFIED",
+      "notes": "Downstream affected lot from contaminated raw cumin batch"
+    },
+    {
+      "lot_code": "FL-SALSA-102",
+      "production_event_id": "PROD-EVT-4402",
+      "product_name": "Artisan Roasted Salsa 16oz",
+      "sku": "SKU-SAL-16OZ",
+      "units_produced": 2400,
+      "best_by_date": "2027-03-16",
+      "disposition": "AVAILABLE",
+      "traceability_status": "VERIFIED",
+      "notes": "Unaffected control lot produced with clean ingredient"
+    },
+    {
+      "lot_code": "FL-SALSA-103",
+      "production_event_id": null,
+      "product_name": "Artisan Roasted Salsa 16oz",
+      "sku": "SKU-SAL-16OZ",
+      "units_produced": 1200,
+      "best_by_date": "2027-03-17",
+      "disposition": "AVAILABLE",
+      "traceability_status": "UNKNOWN",
+      "notes": "Intentional missing transformation record; triggers traceability-gap detection and QA audit review task"
+    }
+  ],
+  "locations": [
+    {
+      "location_id": "LOC-RETAIL-ALPHA",
+      "name": "Pacific Regional Distribution Center",
+      "gln": "0860003139001",
+      "contact_email": "receiving@pacificretail.example.com",
+      "state_code": "CA"
+    },
+    {
+      "location_id": "LOC-RETAIL-BETA",
+      "name": "Sierra Hub Beta",
+      "gln": "0860003139002",
+      "contact_email": "logistics@sierrahub.example.com",
+      "state_code": "NV"
+    },
+    {
+      "location_id": "LOC-RETAIL-GAMMA",
+      "name": "Northwest Distribution Gamma",
+      "gln": "0860003139003",
+      "contact_email": "dock@nwdist.example.com",
+      "state_code": "OR"
+    }
+  ],
+  "shipments": [
+    {
+      "shipment_id": "SHIP-8821",
+      "finished_lot_code": "FL-SALSA-101",
+      "carrier_name": "Swift Cold Logistics",
+      "dispatched_at": "2026-10-13T10:00:00Z",
+      "units_shipped": 1200,
+      "shipping_disposition": "IN_TRANSIT",
+      "traceability_status": "VERIFIED",
+      "destination_location_id": "LOC-RETAIL-ALPHA"
+    },
+    {
+      "shipment_id": "SHIP-8822",
+      "finished_lot_code": "FL-SALSA-101",
+      "carrier_name": "Pacific Freight Systems",
+      "dispatched_at": "2026-10-14T08:00:00Z",
+      "units_shipped": 1200,
+      "shipping_disposition": "DELIVERED",
+      "traceability_status": "VERIFIED",
+      "destination_location_id": "LOC-RETAIL-BETA"
+    },
+    {
+      "shipment_id": "SHIP-8823",
+      "finished_lot_code": "FL-SALSA-102",
+      "carrier_name": "Cascadia Express",
+      "dispatched_at": "2026-10-14T11:00:00Z",
+      "units_shipped": 2400,
+      "shipping_disposition": "DELIVERED",
+      "traceability_status": "VERIFIED",
+      "destination_location_id": "LOC-RETAIL-GAMMA"
+    },
+    {
+      "shipment_id": "SHIP-8824",
+      "finished_lot_code": "FL-SALSA-103",
+      "carrier_name": "Swift Cold Logistics",
+      "dispatched_at": "2026-10-14T14:00:00Z",
+      "units_shipped": 600,
+      "shipping_disposition": "IN_TRANSIT",
+      "traceability_status": "GAP_DETECTED",
+      "destination_location_id": "LOC-RETAIL-ALPHA"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVID-LAB-904",
+      "evidence_type": "COA_LAB_REPORT",
+      "title": "Apex Spice Certificate of Analysis Salmonella Alert",
+      "source_uri": "file:///mock/lab/coa_904.pdf",
+      "hash_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorded_at": "2026-10-15T08:00:00Z",
+      "confidence_score": 1.0,
+      "target_lot_code": "LOT-CUM-2026-088"
+    }
+  ],
+  "recall_cases": [
+    {
+      "case_id": "CASE-2026-004",
+      "opened_at": "2026-10-15T08:15:00Z",
+      "hazard_type": "BIOLOGICAL",
+      "pathogen_or_hazard": "Salmonella enterica",
+      "provisional_class": "CLASS_I",
+      "lifecycle_status": "INVESTIGATING",
+      "target_raw_lot": "LOT-CUM-2026-088",
+      "evidence_ids": ["EVID-LAB-904"],
+      "owning_unit_id": "ORG-QA"
+    }
+  ],
+  "org_units": [
+    {
+      "unit_id": "ORG-QA",
+      "name": "Quality Assurance & Food Safety",
+      "lead_contact": "qa.director@verdantharvest.example.com",
+      "escalation_level": 1
+    },
+    {
+      "unit_id": "ORG-LOGISTICS",
+      "name": "Supply Chain & Dispatch",
+      "lead_contact": "dispatch@verdantharvest.example.com",
+      "escalation_level": 2
+    }
+  ]
+}

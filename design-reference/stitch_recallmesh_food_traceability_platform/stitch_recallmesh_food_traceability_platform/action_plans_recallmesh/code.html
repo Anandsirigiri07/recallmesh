@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#002114","surface-container-low":"#e6f7f1","primary":"#136150","surface-container-high":"#dbece6","on-tertiary-fixed":"#3e0500","surface-container":"#e0f2eb","tertiary-fixed":"#ffdad3","on-tertiary":"#ffffff","on-error":"#ffffff","primary-container":"#337a68","on-primary-fixed-variant":"#005141","inverse-surface":"#24332f","primary-fixed-dim":"#8ed4bf","tertiary-fixed-dim":"#ffb4a5","primary-fixed":"#a9f1db","on-primary-fixed":"#002019","surface-variant":"#d5e6e0","on-surface-variant":"#3f4945","on-surface":"#0f1e1b","on-primary-container":"#c0ffeb","surface-container-lowest":"#ffffff","inverse-primary":"#8ed4bf","outline":"#6f7975","on-primary":"#ffffff","background":"#ecfdf7","error-container":"#ffdad6","on-secondary":"#ffffff","on-error-container":"#93000a","on-background":"#0f1e1b","surface-bright":"#ecfdf7","secondary-fixed-dim":"#92d4b3","on-secondary-container":"#2f7054","on-secondary-fixed-variant":"#065138","secondary":"#286a4f","tertiary":"#933927","tertiary-container":"#b3503c","surface-container-highest":"#d5e6e0","surface":"#ecfdf7","error":"#ba1a1a","surface-dim":"#cdded8","secondary-container":"#aef1ce","on-tertiary-container":"#ffefec","outline-variant":"#bec9c4","on-tertiary-fixed-variant":"#7f2a19","inverse-on-surface":"#e3f5ee","secondary-fixed":"#aef1ce","surface-tint":"#206a58"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin-mobile":"1rem","space-md":"1rem","space-xl":"2.5rem","gutter":"1.5rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"2rem","gutter-mobile":"1rem"},fontFamily:{"headline-sm":["DM Sans"],"body-md":["DM Sans"],"body-lg":["DM Sans"],"headline-xl":["DM Sans"],"label-sm":["DM Sans"],"label-md":["DM Sans"],"label-lg":["DM Sans"],"headline-lg":["DM Sans"],"headline-md":["DM Sans"],"body-sm":["DM Sans"]},fontSize:{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0.005em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-lowest border-r border-outline-variant z-50 flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant"><img alt="RECALLMESH Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5FdQBHoMJfZ_7lXExMcoLVTG5SkwQQHE5HE5oP9QuFoTM1UQD_tjAZQ1TwZK13obthpM-V0CYSoFUjBqXvpWNN1axMrwijAufM4bDuhKD8ITMaPuhHPZQHT_kdmp_54P8KhjJlj6KT54XoHlgQEc9qKf_WzGTIn93EJ8OH4wXPhkFU-B5ziifIiJzN1jnPodLmUUu8KwdGsSArJCK2GKNbpYv9rAnb7K-6NIXhkr6_TBduG3Gm_AC6rs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">RECALLMESH</span></div><nav class="flex-1 px-space-sm py-space-md space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl"><a class="flex items-center px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="investigations" href="#">Investigations</a><a class="flex items-center px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="traceability-graph" href="#">Traceability Graph</a><a class="flex items-center px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="action-plans" href="#">Action Plans</a><a class="flex items-center px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agent-memory" href="#">Agent Memory</a><a class="flex items-center px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="company-brain" href="#">Company Brain</a></nav><div class="p-space-sm border-t border-outline-variant"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">verified_user</span></div><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface truncate">FDA FSMA 204</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Verified Node</span></div></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface-container-lowest border-b border-outline-variant z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest border border-outline-variant rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search lots, shipments, facilities..." type="text"></div><span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant uppercase tracking-wider">Demo data</span></div><div class="flex items-center gap-space-md shrink-0"><button class="inline-flex items-center gap-space-xs h-10 px-space-md bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-xl transition-colors shadow-[0_1px_8px_rgba(36,51,47,0.06)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span class="">New investigation</span></button><div class="w-px h-6 bg-outline-variant"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 min-h-screen bg-surface p-space-margin"><div class="flex flex-col w-full">
+<div class="max-w-[1440px] w-full mx-auto pb-space-xl">
+<!-- TOP BANNER & HEADER -->
+<header class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">FSMA 204 Stage II</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-outline">Simulation Environment Active</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-inverse-surface tracking-tight">Action Plans</h1>
+<p class="font-body-md text-body-md text-outline mt-1">Review, authorize, and run containment vectors across synthetic digital twins.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start sm:self-auto">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant">Model: MESH-ALPHA-4</span>
+<button class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-primary-container transition-colors py-1 px-2 rounded-lg" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span class="">Batch Audit Log</span>
+</button>
+</div>
+</div>
+<!-- Simulation Guardrail Alert Banner -->
+<div class="flex items-center gap-space-sm px-space-md py-3 rounded-xl bg-[#FEF8E8] border border-[#F3DA98] text-[#745115] shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-[#8F6617] shrink-0">info</span>
+<div class="flex-1 font-body-sm text-body-sm flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class=""><strong>Simulated actions only.</strong> Nothing real is stopped or sent. Production warehouse management systems (WMS) remain unaffected.</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide opacity-80 shrink-0 font-semibold">Dry-run Session #SR-9412</span>
+</div>
+</div>
+</header>
+<!-- TWO-COLUMN MAIN WORKSPACE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Action Candidates List (approx 380px wide on 12-col) -->
+<section aria-label="Simulated Action Backlog" class="lg:col-span-4 xl:col-span-4 flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-inverse-surface">Proposed Actions</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">4 queued</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline" type="button">Filter &amp; Sort</button>
+</div>
+<!-- Card 1: SELECTED -->
+<article class="p-space-lg rounded-xl bg-[#F0F7F5] border-2 border-primary-container shadow-sm cursor-pointer transition-all relative overflow-hidden" tabindex="0">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary-container border border-outline-variant shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#F0ECE1] text-[#5C584E] border border-outline-variant">
+              Proposed
+            </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-inverse-surface leading-snug mb-1">
+            Hold inventory of FL-SALSA-101 (simulated)
+          </h2>
+<p class="font-body-sm text-body-sm text-outline flex items-center gap-1.5 mt-2">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+            Response Planner · QA Team
+          </p>
+<div class="mt-space-md pt-3 border-t border-outline-variant/60 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Critical Path Link
+            </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">ID: ACT-0019</span>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-outline transition-all cursor-pointer shadow-sm group" tabindex="0">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant border border-outline-variant group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#F0ECE1] text-[#5C584E] border border-outline-variant">
+              Proposed
+            </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-inverse-surface leading-snug mb-1">
+            Hold shipments SHIP-8821 and SHIP-8822 (simulated)
+          </h2>
+<p class="font-body-sm text-body-sm text-outline flex items-center gap-1.5 mt-2">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+            Logistics Agent
+          </p>
+<div class="mt-space-md pt-3 border-t border-outline-variant flex items-center justify-between text-outline">
+<span class="font-body-sm text-body-sm">2 carriers alerted</span>
+<span class="font-label-sm text-label-sm font-mono">ID: ACT-0020</span>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-outline transition-all cursor-pointer shadow-sm group" tabindex="0">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant border border-outline-variant group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#F0ECE1] text-[#5C584E] border border-outline-variant">
+              Proposed
+            </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-inverse-surface leading-snug mb-1">
+            Draft notice to Northgate DC
+          </h2>
+<p class="font-body-sm text-body-sm text-outline flex items-center gap-1.5 mt-2">
+<span class="material-symbols-outlined text-[16px]">contact_mail</span>
+            Customer Ops
+          </p>
+<div class="mt-space-md pt-3 border-t border-outline-variant flex items-center justify-between text-outline">
+<span class="font-body-sm text-body-sm">Template: Recall Phase I</span>
+<span class="font-label-sm text-label-sm font-mono">ID: ACT-0021</span>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-outline transition-all cursor-pointer shadow-sm group" tabindex="0">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant border border-outline-variant group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#F0ECE1] text-[#5C584E] border border-outline-variant">
+              Proposed
+            </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-inverse-surface leading-snug mb-1">
+            QA evidence request for FL-SALSA-103
+          </h2>
+<p class="font-body-sm text-body-sm text-outline flex items-center gap-1.5 mt-2">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+            Supplier QA Lead
+          </p>
+<div class="mt-space-md pt-3 border-t border-outline-variant flex items-center justify-between text-outline">
+<span class="font-body-sm text-body-sm">CoA &amp; Microbial Assay</span>
+<span class="font-label-sm text-label-sm font-mono">ID: ACT-0022</span>
+</div>
+</article>
+</section>
+<!-- RIGHT COLUMN: Detailed Review Stage -->
+<section aria-label="Action Execution Review" class="lg:col-span-8 xl:col-span-8 flex flex-col gap-space-lg">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex flex-col gap-space-lg">
+<!-- Detailed Header -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md pb-space-md border-b border-outline-variant">
+<div>
+<div class="flex items-center gap-space-sm mb-1.5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#F0ECE1] text-[#5C584E] border border-outline-variant">
+                  Proposed
+                </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">SYS-TRIGGER: REF-CTE-9042</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-inverse-surface">Hold inventory of FL-SALSA-101 (simulated)</h2>
+<p class="font-body-md text-body-md text-outline mt-1">Initiator: <span class="text-inverse-surface font-medium">Response Planner · QA Team</span> • Target facility: <span class="text-inverse-surface font-medium">Austin Central Distribution (TX-WMS-01)</span></p>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-start">
+<button class="h-10 px-3 rounded-xl border border-outline-variant text-outline hover:text-inverse-surface hover:bg-surface-container transition-colors flex items-center gap-1 font-label-md text-label-md" title="Download Audit Dossier" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="">Export Plan</span>
+</button>
+</div>
+</div>
+<!-- Section 1: Why (Evidence Path) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-inverse-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">route</span>
+                Why: Evidence Traceability Lineage
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary/10 text-tertiary border border-tertiary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Affected Path Confirmed
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Upstream critical tracking event identifies positive salmonella screen propagation directly into this finished lot batch.</p>
+<!-- Lineage Flow Representation -->
+<div class="p-space-md rounded-xl bg-surface border border-outline-variant flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm overflow-x-auto">
+<!-- Step A -->
+<div class="flex-1 min-w-[200px] p-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Facility Origin</span>
+<span class="font-headline-sm text-headline-sm text-inverse-surface mt-0.5">Sunrise Spice Co.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Location ID: TX-4</span>
+</div>
+<div class="hidden md:flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</div>
+<!-- Step B (Flagged source) -->
+<div class="flex-1 min-w-[220px] p-space-sm rounded-lg bg-surface-container-lowest border-2 border-tertiary flex flex-col relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase">Source Contaminant</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">warning</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-inverse-surface mt-0.5">Cumin Lot</span>
+<span class="font-body-sm text-body-sm text-tertiary font-mono font-semibold">LOT-CUM-2026-088</span>
+</div>
+<div class="hidden md:flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</div>
+<!-- Step C (Target) -->
+<div class="flex-1 min-w-[220px] p-space-sm rounded-lg bg-surface-container-lowest border border-primary-container flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase">Interception Goal</span>
+<span class="material-symbols-outlined text-[16px] text-primary">target</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-inverse-surface mt-0.5">Salsa blend run</span>
+<span class="font-body-sm text-body-sm text-primary-container font-mono font-semibold">PR-9042 · FL-SALSA-101</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Now vs. After Approval -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-inverse-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">compare_arrows</span>
+              Now vs. After Approval
+            </span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Current State -->
+<div class="p-space-md rounded-xl bg-surface-container-low border border-outline-variant flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant mb-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Now (Current State)</span>
+<span class="material-symbols-outlined text-[18px] text-outline">lock_open</span>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-inverse-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline shrink-0 mt-0.5">schedule</span>
+<div class="">
+<strong>SHIP-8821:</strong> In transit via Southwest Refrig. Express
+                      </div>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline shrink-0 mt-0.5">warehouse</span>
+<div class="">
+<strong>Inventory status:</strong> Unlocked in Austin WMS, available for dispatch
+                      </div>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline shrink-0 mt-0.5">assignment_turned_in</span>
+<div class="">
+<strong>ERP Quarantine:</strong> Inactive (Bin 04-A to 04-D)
+                      </div>
+</li>
+</ul>
+</div>
+<div class="font-label-sm text-label-sm text-outline border-t border-outline-variant pt-2">
+                  Live data feed verified 3 minutes ago</div>
+</div>
+<!-- Simulation Impact -->
+<div class="p-space-md rounded-xl bg-[#F0F7F5] border border-primary-container flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between pb-2 border-b border-primary-container/30 mb-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-semibold">After Approval (Simulation Impact)</span>
+<span class="material-symbols-outlined text-[18px] text-primary">lock_clock</span>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-inverse-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check_circle</span>
+<div class="">
+<strong>SHIP-8821:</strong> Held (simulated). Carrier geofence reroute trigger armed
+                      </div>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">verified_user</span>
+<div class="">
+<strong>Inventory status:</strong> Automated hold flag applied in digital twin
+                      </div>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">sync_saved_locally</span>
+<div class="">
+<strong>Downstream broadcast:</strong> Notice generated for 14 regional hubs
+                      </div>
+</li>
+</ul>
+</div>
+<div class="font-label-sm text-label-sm text-primary border-t border-primary-container/30 pt-2 font-medium">
+                  Zero real-world warehouse stoppage during simulation
+                </div>
+</div>
+</div>
+</div>
+<!-- Section 3: 3-Step Approval Pipeline -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-headline-sm text-headline-sm text-inverse-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">linear_scale</span>
+              3-Step Approval Pipeline
+            </span>
+<p class="font-body-sm text-body-sm text-outline">Approval acts as the formal human-in-the-loop audit gate prior to dry-run simulated execution.</p>
+<div class="p-space-md rounded-xl bg-surface border border-outline-variant">
+<div class="relative flex items-center justify-between w-full max-w-xl mx-auto py-2">
+<!-- Connector Line Background -->
+<div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-0.5 bg-outline-variant -z-0"></div>
+<!-- Connector Active Bar -->
+<div class="absolute left-6 w-1/4 top-1/2 -translate-y-1/2 h-0.5 bg-primary-container -z-0"></div>
+<!-- Step 1: Proposed (Active) -->
+<div class="flex flex-col items-center gap-2 bg-surface px-2 z-10">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+</div>
+<div class="text-center">
+<span class="block font-headline-sm text-headline-sm text-inverse-surface">1. Proposed</span>
+<span class="block font-label-sm text-label-sm text-primary font-medium">Current Stage</span>
+</div>
+</div>
+<!-- Step 2: Approved (Pending gate) -->
+<div class="flex flex-col items-center gap-2 bg-surface px-2 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-outline-variant text-outline flex items-center justify-center font-label-md text-label-md">
+                    2
+                  </div>
+<div class="text-center">
+<span class="block font-headline-sm text-headline-sm text-outline">2. Approved</span>
+<span class="block font-label-sm text-label-sm text-outline">Quality Gate</span>
+</div>
+</div>
+<!-- Step 3: Simulated Execution -->
+<div class="flex flex-col items-center gap-2 bg-surface px-2 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-outline-variant text-outline flex items-center justify-center font-label-md text-label-md">
+                    3
+                  </div>
+<div class="text-center">
+<span class="block font-headline-sm text-headline-sm text-outline">3. Simulated</span>
+<span class="block font-label-sm text-label-sm text-outline">Digital Twin Run</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Action Controls -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-sm border-t border-outline-variant">
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="h-10 px-space-md bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span class="">Approve simulated action</span>
+</button>
+<button class="h-10 px-space-md bg-surface-container-lowest border border-primary-container text-primary-container hover:bg-surface-container transition-all font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+<span class="">Request changes</span>
+</button>
+</div>
+<button class="h-10 px-space-md text-[#B34732] hover:bg-[#ffdad3]/40 font-label-lg text-label-lg rounded-xl transition-all flex items-center justify-center gap-1.5 self-end sm:self-auto cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span class="">Block</span>
+</button>
+</div>
+<!-- Section 5: History / Audit Timeline -->
+<div class="flex flex-col gap-space-sm pt-space-md border-t border-outline-variant">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Action Audit Trail</span>
+<span class="font-label-sm text-label-sm text-outline">FSMA Section 204.145 Compliant Log</span>
+</div>
+<div class="space-y-space-sm font-body-sm text-body-sm">
+<!-- Log Entry 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface transition-colors border border-transparent hover:border-outline-variant">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span class="text-inverse-surface font-medium">Proposed by Response Planner</span>
+<span class="text-outline hidden sm:inline">• Automated heuristic trigger</span>
+</div>
+<time class="text-outline font-mono font-label-sm text-label-sm">Today, 10:18 AM</time>
+</div>
+<!-- Log Entry 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface transition-colors border border-transparent hover:border-outline-variant">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span class="text-inverse-surface font-medium">Linked to FSMA 204 critical tracking event</span>
+<span class="text-outline hidden sm:inline">• Reference LOT-CUM-2026-088</span>
+</div>
+<time class="text-outline font-mono font-label-sm text-label-sm">Today, 10:20 AM</time>
+</div>
+<!-- Log Entry 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface transition-colors border border-transparent hover:border-outline-variant bg-surface/50">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0"></span>
+<span class="text-outline">Waiting for approval from QA Lead</span>
+<span class="text-outline/70 hidden sm:inline">• Assignee: Morgan Bailey</span>
+</div>
+<span class="text-outline italic font-label-sm text-label-sm">Pending signature</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

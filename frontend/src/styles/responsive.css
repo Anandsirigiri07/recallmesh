@@ -1,0 +1,95 @@
+/**
+ * Responsive Layout Styles for RECALLMESH
+ * Implements Stitch layout rules for Desktop (1440/1024), Tablet (820), and Phone (390).
+ */
+
+/* Desktop Defaults (>=1024px) */
+.recallmesh-sidebar {
+  transform: translateX(0);
+}
+
+.recallmesh-header {
+  left: var(--sidebar-width);
+}
+
+.recallmesh-main-wrapper {
+  margin-left: var(--sidebar-width);
+}
+
+/* Tablet & Mobile (<1024px) */
+@media (max-width: 1023px) {
+  .recallmesh-sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-modal);
+  }
+
+  .recallmesh-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .recallmesh-header {
+    left: 0 !important;
+  }
+
+  .recallmesh-main-wrapper {
+    margin-left: 0 !important;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex !important;
+  }
+
+  /* Main grid columns stack */
+  .overview-main-left,
+  .overview-main-right {
+    grid-column: span 12 !important;
+  }
+
+  .traceability-graph-main-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .action-plans-main-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .action-backlog-col,
+  .action-detail-col {
+    grid-column: span 12 !important;
+  }
+}
+
+/* Phone Layout (<768px, specifically 390px iPhone reference) */
+@media (max-width: 767px) {
+  .recallmesh-main-content {
+    padding: calc(var(--header-height) + 16px) 16px 24px 16px !important;
+  }
+
+  .recallmesh-header {
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+
+  /* Hide long button labels if space is tight */
+  .recallmesh-header .stitch-btn span:not(.material-symbols-outlined) {
+    display: none;
+  }
+
+  /* Make sure tables do not break parent width */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  /* Headings size appropriately */
+  .text-headline-lg {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  .text-headline-xl {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+}

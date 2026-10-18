@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#002114","surface-container-low":"#e6f7f1","primary":"#136150","surface-container-high":"#dbece6","on-tertiary-fixed":"#3e0500","surface-container":"#e0f2eb","tertiary-fixed":"#ffdad3","on-tertiary":"#ffffff","on-error":"#ffffff","primary-container":"#337a68","on-primary-fixed-variant":"#005141","inverse-surface":"#24332f","primary-fixed-dim":"#8ed4bf","tertiary-fixed-dim":"#ffb4a5","primary-fixed":"#a9f1db","on-primary-fixed":"#002019","surface-variant":"#d5e6e0","on-surface-variant":"#3f4945","on-surface":"#0f1e1b","on-primary-container":"#c0ffeb","surface-container-lowest":"#ffffff","inverse-primary":"#8ed4bf","outline":"#6f7975","on-primary":"#ffffff","background":"#ecfdf7","error-container":"#ffdad6","on-secondary":"#ffffff","on-error-container":"#93000a","on-background":"#0f1e1b","surface-bright":"#ecfdf7","secondary-fixed-dim":"#92d4b3","on-secondary-container":"#2f7054","on-secondary-fixed-variant":"#065138","secondary":"#286a4f","tertiary":"#933927","tertiary-container":"#b3503c","surface-container-highest":"#d5e6e0","surface":"#ecfdf7","error":"#ba1a1a","surface-dim":"#cdded8","secondary-container":"#aef1ce","on-tertiary-container":"#ffefec","outline-variant":"#bec9c4","on-tertiary-fixed-variant":"#7f2a19","inverse-on-surface":"#e3f5ee","secondary-fixed":"#aef1ce","surface-tint":"#206a58"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin-mobile":"1rem","space-md":"1rem","space-xl":"2.5rem","gutter":"1.5rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"2rem","gutter-mobile":"1rem"},fontFamily:{"headline-sm":["DM Sans"],"body-md":["DM Sans"],"body-lg":["DM Sans"],"headline-xl":["DM Sans"],"label-sm":["DM Sans"],"label-md":["DM Sans"],"label-lg":["DM Sans"],"headline-lg":["DM Sans"],"headline-md":["DM Sans"],"body-sm":["DM Sans"]},fontSize:{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0.005em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-lowest border-r border-outline-variant z-50 flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant"><img alt="RECALLMESH Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5FdQBHoMJfZ_7lXExMcoLVTG5SkwQQHE5HE5oP9QuFoTM1UQD_tjAZQ1TwZK13obthpM-V0CYSoFUjBqXvpWNN1axMrwijAufM4bDuhKD8ITMaPuhHPZQHT_kdmp_54P8KhjJlj6KT54XoHlgQEc9qKf_WzGTIn93EJ8OH4wXPhkFU-B5ziifIiJzN1jnPodLmUUu8KwdGsSArJCK2GKNbpYv9rAnb7K-6NIXhkr6_TBduG3Gm_AC6rs"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">RECALLMESH</span></div><nav class="flex-1 px-space-sm py-space-md space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl"><a class="flex items-center px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="investigations" href="#">Investigations</a><a aria-current="page" class="flex items-center px-space-md py-2.5 transition-colors bg-primary-container text-on-primary font-label-lg rounded-xl" data-path="traceability-graph" href="#">Traceability Graph</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="action-plans" href="#">Action Plans</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agent-memory" href="#">Agent Memory</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="company-brain" href="#">Company Brain</a></nav><div class="p-space-sm border-t border-outline-variant"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">verified_user</span></div><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface truncate">FDA FSMA 204</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Verified Node</span></div></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface-container-lowest border-b border-outline-variant z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest border border-outline-variant rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search lots, shipments, facilities..." type="text"/></div><span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant uppercase tracking-wider">Demo data</span></div><div class="flex items-center gap-space-md shrink-0"><button class="inline-flex items-center gap-space-xs h-10 px-space-md bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-xl transition-colors shadow-[0_1px_8px_rgba(36,51,47,0.06)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New investigation</span></button><div class="w-px h-6 bg-outline-variant"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 min-h-screen bg-surface p-space-margin"><div class="flex flex-col w-full">
+<!-- Top Header Row -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<h1 class="text-2xl font-bold text-[#24332F] tracking-tight">Traceability Graph</h1>
+<p class="text-sm text-[#69736E] mt-0.5">See how every lot, shipment and place is connected.</p>
+</div>
+<!-- Path Filter Toggle -->
+<div class="inline-flex items-center p-1 bg-white border border-[#E7E3D9] rounded-xl self-start md:self-auto shadow-sm">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-[#337A68] text-white shadow-sm transition-all" id="toggle-affected" type="button">
+<span class="w-2 h-2 rounded-full bg-[#E77861]"></span>
+        Affected paths only
+      </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-[#69736E] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-all" id="toggle-all" type="button">
+        All records
+      </button>
+</div>
+</div>
+<!-- Slim Toolbar Card -->
+<div class="w-full bg-white rounded-xl border border-[#E7E3D9] px-4 py-3 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4 mb-6 shadow-sm">
+<!-- Filter Chips Row -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-0.5">
+<button class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[#EBF4F1] text-[#337A68] border border-[#337A68]/30" type="button">
+<span class="material-symbols-outlined text-[14px]">check</span>
+        Lots
+      </button>
+<button class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white text-[#69736E] border border-[#E7E3D9] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-colors" type="button">
+        Shipments
+      </button>
+<button class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white text-[#69736E] border border-[#E7E3D9] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-colors" type="button">
+        Suppliers
+      </button>
+<button class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white text-[#69736E] border border-[#E7E3D9] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-colors" type="button">
+        Evidence
+      </button>
+<button class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white text-[#69736E] border border-[#E7E3D9] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-colors" type="button">
+        Locations
+      </button>
+</div>
+<!-- Center Search Input -->
+<div class="relative w-full sm:w-72 lg:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#69736E] text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg border border-[#E7E3D9] bg-[#FAF6EC]/40 text-sm text-[#24332F] placeholder:text-[#69736E] focus:outline-none focus:border-[#337A68] focus:ring-1 focus:ring-[#337A68]/20 transition-all" placeholder="Find a lot or shipment..." type="text"/>
+</div>
+<!-- Canvas Controls -->
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-[#69736E] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-colors" title="Zoom in" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-[#69736E] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-colors" title="Zoom out" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-[#69736E] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-colors" title="Fit to screen" type="button">
+<span class="material-symbols-outlined text-[18px]">crop_free</span>
+</button>
+<div class="w-px h-4 bg-[#E7E3D9] mx-1"></div>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-[#69736E] hover:bg-[#FAF6EC] hover:text-[#24332F] rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">refresh</span>
+        Reset
+      </button>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+<!-- Big Graph Area (Left/Center Canvas) -->
+<div class="xl:col-span-8 2xl:col-span-9 bg-white rounded-xl border border-[#E7E3D9] p-5 relative overflow-hidden flex flex-col justify-between min-h-[640px] shadow-sm">
+<!-- Faint Dot Grid Background -->
+<div class="absolute inset-0 pointer-events-none opacity-60" style="background-image: radial-gradient(#d5d1c5 1.2px, transparent 1.2px); background-size: 24px 24px;"></div>
+<!-- Stage Column Headers -->
+<div class="relative z-10 grid grid-cols-6 gap-3 pb-3 border-b border-[#E7E3D9]/70 text-center">
+<div class="text-[11px] font-semibold text-[#69736E] tracking-wider uppercase">1. Supplier</div>
+<div class="text-[11px] font-semibold text-[#69736E] tracking-wider uppercase">2. Ingredient lot</div>
+<div class="text-[11px] font-semibold text-[#69736E] tracking-wider uppercase">3. Production</div>
+<div class="text-[11px] font-semibold text-[#69736E] tracking-wider uppercase">4. Finished lot</div>
+<div class="text-[11px] font-semibold text-[#69736E] tracking-wider uppercase">5. Shipment</div>
+<div class="text-[11px] font-semibold text-[#69736E] tracking-wider uppercase">6. Destination</div>
+</div>
+<!-- Canvas Graph Interactive Zone -->
+<div class="relative z-10 flex-1 my-6 min-h-[440px] flex items-center">
+<!-- SVG Connections Overlay (Scaled coordinates aligned to 6 cols) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="dot-coral" markerheight="6" markerwidth="6" refx="4" refy="4" viewbox="0 0 8 8">
+<circle cx="4" cy="4" fill="#E77861" r="3"></circle>
+</marker>
+</defs>
+<!-- Path 1: Supplier -> Ingredient Lot (Verified Sage/Teal) -->
+<path d="M 15% 50% C 18% 50%, 20% 50%, 23% 50%" fill="none" stroke="#579779" stroke-linecap="round" stroke-width="2"></path>
+<!-- Path 2: Ingredient Lot -> Production Run (Affected Coral) -->
+<path d="M 31% 50% C 34% 50%, 36% 50%, 40% 50%" fill="none" stroke="#E77861" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Path 3A: Production Run -> FL-SALSA-101 (Affected Coral, branches upward) -->
+<path d="M 48% 50% C 51% 50%, 53% 22%, 56% 22%" fill="none" stroke="#E77861" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Path 3B: Production Run -> FL-SALSA-102 (Unconfirmed Grey, horizontal) -->
+<path d="M 48% 50% C 51% 50%, 53% 50%, 56% 50%" fill="none" stroke="#D0CCC3" stroke-dasharray="3 3" stroke-linecap="round" stroke-width="1.5"></path>
+<!-- Path 3C: Production Run -> FL-SALSA-103 (Needs Review, Missing Link Lavender dashed) -->
+<path d="M 48% 50% C 51% 50%, 53% 78%, 56% 78%" fill="none" stroke="#9682CE" stroke-dasharray="4 4" stroke-linecap="round" stroke-width="2"></path>
+<!-- Path 4A: FL-SALSA-101 -> SHIP-8821 (Affected Coral) -->
+<path d="M 64.5% 22% C 67% 22%, 69% 28%, 73% 28%" fill="none" stroke="#E77861" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Path 4B: FL-SALSA-101 -> SHIP-8822 (Affected Coral) -->
+<path d="M 64.5% 22% C 67% 22%, 69% 68%, 73% 68%" fill="none" stroke="#E77861" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Path 5A: SHIP-8821 -> Northgate DC (Affected Coral) -->
+<path d="M 81.5% 28% C 84% 28%, 86% 28%, 89.5% 28%" fill="none" stroke="#E77861" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Path 5B: SHIP-8822 -> Lakeside Retail Hub (Affected Coral) -->
+<path d="M 81.5% 68% C 84% 68%, 86% 68%, 89.5% 68%" fill="none" stroke="#E77861" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<!-- Missing Link Floating Badge on the Lavender line -->
+<div class="absolute left-[50.5%] top-[65%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#F4F1FB] border border-[#DED5F5] text-[#4E3C8A]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#9682CE]"></span>
+            Missing link
+          </span>
+</div>
+<!-- 6 Column Node Grid Placement -->
+<div class="w-full grid grid-cols-6 gap-3 z-10">
+<!-- Col 1: Supplier Node -->
+<div class="flex flex-col justify-center items-center">
+<div class="node-card w-full max-w-[150px] bg-white rounded-xl border border-[#E7E3D9] p-3 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#579779]">
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="material-symbols-outlined text-[#579779] text-[16px]">domain</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-[#245842] bg-[#EEF6F2] px-1.5 py-0.5 rounded">Supplier</span>
+</div>
+<div class="text-xs font-bold text-[#24332F] truncate">Sunrise Spice Co.</div>
+<div class="text-[11px] text-[#69736E] mt-0.5 truncate">Austin, TX-4</div>
+</div>
+</div>
+<!-- Col 2: Ingredient Lot Node -->
+<div class="flex flex-col justify-center items-center">
+<div class="node-card w-full max-w-[155px] bg-white rounded-xl border border-[#E7E3D9] p-3 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#E77861] ring-1 ring-[#E77861]/20">
+<div class="flex items-center justify-between mb-1">
+<span class="material-symbols-outlined text-[#E77861] text-[16px]">grain</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-[#FDF0ED] text-[#8E2F1C]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#E77861] animate-pulse"></span>
+                  Source lot
+                </span>
+</div>
+<div class="text-xs font-bold text-[#24332F] truncate">LOT-CUM-2026-088</div>
+<div class="text-[11px] text-[#69736E] mt-0.5 truncate">Cumin extract 50kg</div>
+</div>
+</div>
+<!-- Col 3: Production Run Node -->
+<div class="flex flex-col justify-center items-center">
+<div class="node-card w-full max-w-[150px] bg-white rounded-xl border border-[#E7E3D9] p-3 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#E77861]">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-[#E77861] text-[16px]">science</span>
+<span class="text-[9px] font-bold uppercase tracking-wide text-[#8E2F1C] bg-[#FDF0ED] px-1.5 py-0.5 rounded">Transformation</span>
+</div>
+<div class="text-xs font-bold text-[#24332F] truncate">Salsa blend run</div>
+<div class="text-[11px] text-[#69736E] mt-0.5 truncate">Batch PR-9042</div>
+</div>
+</div>
+<!-- Col 4: Finished Lots (3 Stacked) -->
+<div class="flex flex-col justify-center gap-4">
+<!-- FL-101 (Affected) -->
+<div class="node-card w-full bg-white rounded-xl border border-[#E7E3D9] p-2.5 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#E77861]">
+<div class="flex items-center justify-between gap-1 mb-1">
+<div class="flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[#E77861] text-[15px]">inventory_2</span>
+<span class="text-xs font-bold text-[#24332F] truncate">FL-SALSA-101</span>
+</div>
+<span class="shrink-0 text-[9px] font-bold text-[#8E2F1C] bg-[#FDF0ED] px-1 py-0.5 rounded">Affected</span>
+</div>
+<div class="text-[11px] text-[#69736E] truncate">Medium Salsa 16oz</div>
+</div>
+<!-- FL-102 (Unconfirmed / Outside) -->
+<div class="node-card w-full bg-[#FAF6EC]/60 rounded-xl border border-[#E7E3D9] p-2.5 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#BEC9C4] opacity-80">
+<div class="flex items-center gap-1 mb-0.5">
+<span class="material-symbols-outlined text-[#69736E] text-[15px]">inventory_2</span>
+<span class="text-xs font-medium text-[#24332F] truncate">FL-SALSA-102</span>
+</div>
+<div class="text-[10px] text-[#69736E] leading-tight">Outside recorded path. Not safe.</div>
+</div>
+<!-- FL-103 (Needs Review) -->
+<div class="node-card w-full bg-white rounded-xl border border-[#E7E3D9] p-2.5 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#D9A638]">
+<div class="flex items-center justify-between gap-1 mb-1">
+<div class="flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[#D9A638] text-[15px]">inventory_2</span>
+<span class="text-xs font-bold text-[#24332F] truncate">FL-SALSA-103</span>
+</div>
+<span class="shrink-0 text-[9px] font-bold text-[#7A570C] bg-[#FEF8E8] px-1 py-0.5 rounded">Review</span>
+</div>
+<div class="text-[11px] text-[#69736E] truncate">Mild Salsa 16oz</div>
+</div>
+</div>
+<!-- Col 5: Shipments (2 Stacked) -->
+<div class="flex flex-col justify-around py-2">
+<!-- SHIP-8821 -->
+<div class="node-card w-full bg-white rounded-xl border border-[#E7E3D9] p-2.5 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#E77861]">
+<div class="flex items-center justify-between mb-1">
+<span class="material-symbols-outlined text-[#E77861] text-[16px]">local_shipping</span>
+<span class="text-[9px] font-bold text-[#8E2F1C] bg-[#FDF0ED] px-1.5 py-0.5 rounded">Affected</span>
+</div>
+<div class="text-xs font-bold text-[#24332F] truncate">SHIP-8821</div>
+<div class="text-[11px] text-[#69736E] truncate">420 cases • Refrig. Express</div>
+</div>
+<!-- SHIP-8822 -->
+<div class="node-card w-full bg-white rounded-xl border border-[#E7E3D9] p-2.5 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#E77861]">
+<div class="flex items-center justify-between mb-1">
+<span class="material-symbols-outlined text-[#E77861] text-[16px]">local_shipping</span>
+<span class="text-[9px] font-bold text-[#8E2F1C] bg-[#FDF0ED] px-1.5 py-0.5 rounded">Affected</span>
+</div>
+<div class="text-xs font-bold text-[#24332F] truncate">SHIP-8822</div>
+<div class="text-[11px] text-[#69736E] truncate">380 cases • Carrier Line</div>
+</div>
+</div>
+<!-- Col 6: Destinations (2 Stacked) -->
+<div class="flex flex-col justify-around py-2">
+<!-- Dest 1: Northgate DC -->
+<div class="node-card w-full bg-white rounded-xl border border-[#E7E3D9] p-2.5 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#E77861]">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-[#E77861] text-[16px]">storefront</span>
+<span class="text-[9px] font-bold text-[#8E2F1C] bg-[#FDF0ED] px-1 py-0.5 rounded">Distributor</span>
+</div>
+<div class="text-xs font-bold text-[#24332F] truncate">Northgate DC</div>
+<div class="text-[11px] text-[#69736E] truncate">Austin, TX (Node 12)</div>
+</div>
+<!-- Dest 2: Lakeside Retail Hub -->
+<div class="node-card w-full bg-white rounded-xl border border-[#E7E3D9] p-2.5 hover:shadow-md transition-all cursor-pointer relative border-l-4 border-l-[#E77861]">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-[#E77861] text-[16px]">store</span>
+<span class="text-[9px] font-bold text-[#8E2F1C] bg-[#FDF0ED] px-1 py-0.5 rounded">Retail</span>
+</div>
+<div class="text-xs font-bold text-[#24332F] truncate">Lakeside Retail Hub</div>
+<div class="text-[11px] text-[#69736E] truncate">San Antonio, TX</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Graph Card Footer (Legend & Slim Coral Path Bar) -->
+<div class="relative z-10 flex flex-col gap-3 pt-3 border-t border-[#E7E3D9]/60">
+<!-- Legend Chips Row -->
+<div class="flex flex-wrap items-center gap-4 text-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#E77861]"></span>
+<span class="text-[#24332F] font-medium">Affected path</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#579779]"></span>
+<span class="text-[#24332F] font-medium">Record verified</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#D9A638]"></span>
+<span class="text-[#24332F] font-medium">Needs review</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#9682CE]"></span>
+<span class="text-[#24332F] font-medium">Unknown link</span>
+</div>
+</div>
+<!-- Slim Coral Path Breadcrumb Bar -->
+<div class="w-full bg-[#FDF0ED] border border-[#F8D2CB] rounded-lg p-2.5 flex flex-wrap md:flex-nowrap items-center justify-between gap-2 text-xs">
+<div class="flex items-center gap-2 overflow-x-auto text-[#24332F]">
+<span class="px-1.5 py-0.5 rounded bg-[#E77861] text-white font-bold text-[10px] tracking-wide shrink-0">PATH</span>
+<span class="font-medium hover:underline cursor-pointer shrink-0">LOT-CUM-2026-088</span>
+<span class="material-symbols-outlined text-[14px] text-[#8E2F1C]">chevron_right</span>
+<span class="font-medium hover:underline cursor-pointer shrink-0">Salsa blend run</span>
+<span class="material-symbols-outlined text-[14px] text-[#8E2F1C]">chevron_right</span>
+<span class="font-medium hover:underline cursor-pointer shrink-0">FL-SALSA-101</span>
+<span class="material-symbols-outlined text-[14px] text-[#8E2F1C]">chevron_right</span>
+<span class="font-medium hover:underline cursor-pointer shrink-0">SHIP-8821</span>
+<span class="material-symbols-outlined text-[14px] text-[#8E2F1C]">chevron_right</span>
+<span class="font-bold text-[#8E2F1C] shrink-0">Northgate DC</span>
+</div>
+<div class="flex items-center gap-1.5 text-[#8E2F1C] font-semibold text-xs shrink-0 pl-2">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>2 shipments reached</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Inspector Empty State Dock (320px) -->
+<div class="xl:col-span-4 2xl:col-span-3">
+<div class="w-full bg-white rounded-xl border border-[#E7E3D9] p-6 flex flex-col items-center justify-center text-center min-h-[640px] shadow-sm relative" id="inspector-panel">
+<!-- Empty State Visual Representation -->
+<div class="w-16 h-16 rounded-full bg-[#EEF6F2] border border-[#CFE5DB] flex items-center justify-center mb-4 transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-[#34654F] text-[30px]">touch_app</span>
+</div>
+<h2 class="text-base font-semibold text-[#24332F] tracking-tight" id="inspector-title">Click any card to see its details here.</h2>
+<p class="text-[13px] text-[#69736E] mt-2.5 leading-relaxed max-w-[260px]" id="inspector-desc">
+          Select an ingredient lot, transformation event, shipment, or facility node to view FSMA 204 critical tracking events and audit provenance.
+        </p>
+<!-- Dynamic Node Attributes Box (Revealed on click) -->
+<div class="hidden w-full text-left mt-6 pt-5 border-t border-[#E7E3D9]" id="inspector-details">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#69736E]">Node Metadata</span>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold" id="detail-badge"></span>
+</div>
+<div class="space-y-2.5 text-xs">
+<div class="p-2.5 bg-[#FAF6EC]/50 rounded-lg border border-[#E7E3D9]/60">
+<span class="text-[#69736E] block text-[10px] uppercase">Critical Tracking Event</span>
+<span class="font-semibold text-[#24332F]" id="detail-cte"></span>
+</div>
+<div class="p-2.5 bg-[#FAF6EC]/50 rounded-lg border border-[#E7E3D9]/60">
+<span class="text-[#69736E] block text-[10px] uppercase">FDA FSMA 204 Reference</span>
+<span class="font-semibold text-[#24332F]" id="detail-ref"></span>
+</div>
+<div class="p-2.5 bg-[#FAF6EC]/50 rounded-lg border border-[#E7E3D9]/60">
+<span class="text-[#69736E] block text-[10px] uppercase">Chain Custody Status</span>
+<span class="font-semibold text-[#24332F]" id="detail-status"></span>
+</div>
+</div>
+<button class="mt-4 w-full h-9 rounded-lg bg-[#337A68] hover:bg-[#2B6758] text-white text-xs font-medium transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+            View FSMA Audit Packet
+          </button>
+</div>
+<!-- Persistent Tip Pill at Bottom -->
+<div class="mt-auto pt-6 w-full">
+<div class="p-3 bg-[#FAF6EC] border border-[#E7E3D9] rounded-xl text-left">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[#337A68] text-[16px] shrink-0 mt-0.5">tips_and_updates</span>
+<p class="text-xs text-[#24332F] leading-snug">
+<span class="font-semibold text-[#337A68]">Tip:</span> Active filter is currently isolating the contaminated lot forward trace.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for Node Selection & Toolbar Toggling -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleAffected = document.getElementById('toggle-affected');
+      const toggleAll = document.getElementById('toggle-all');
+      const nodes = document.querySelectorAll('.node-card');
+      const inspectorTitle = document.getElementById('inspector-title');
+      const inspectorDesc = document.getElementById('inspector-desc');
+      const inspectorDetails = document.getElementById('inspector-details');
+      const detailBadge = document.getElementById('detail-badge');
+      const detailCte = document.getElementById('detail-cte');
+      const detailRef = document.getElementById('detail-ref');
+      const detailStatus = document.getElementById('detail-status');
+
+      // Filter toggle interaction
+      toggleAffected.addEventListener('click', () => {
+        toggleAffected.className = "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-[#337A68] text-white shadow-sm transition-all";
+        toggleAll.className = "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-[#69736E] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-all";
+      });
+
+      toggleAll.addEventListener('click', () => {
+        toggleAll.className = "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-[#337A68] text-white shadow-sm transition-all";
+        toggleAffected.className = "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-[#69736E] hover:bg-[#FAF6EC] hover:text-[#24332F] transition-all";
+      });
+
+      // Node selection feedback
+      nodes.forEach(node => {
+        node.addEventListener('click', () => {
+          nodes.forEach(n => n.classList.remove('ring-2', 'ring-[#337A68]', 'shadow-md'));
+          node.classList.add('ring-2', 'ring-[#337A68]', 'shadow-md');
+
+          const nodeName = node.querySelector('.truncate')?.innerText || 'Selected Node';
+          inspectorTitle.innerText = nodeName;
+          inspectorDesc.innerText = "FSMA critical tracking event records verified with unbroken cryptographic hash signatures.";
+          inspectorDetails.classList.remove('hidden');
+
+          if (nodeName.includes('CUM') || nodeName.includes('SALSA-101') || nodeName.includes('SHIP')) {
+            detailBadge.innerText = 'AFFECTED PATH';
+            detailBadge.className = 'px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#FDF0ED] text-[#8E2F1C] border border-[#F8D2CB]';
+            detailCte.innerText = 'CTE-T-4912 (Receiving / Transformation)';
+            detailRef.innerText = 'FSMA Section 204(d)(1) Mandatory Notice';
+            detailStatus.innerText = 'Immediate Quarantine Requested';
+          } else if (nodeName.includes('103')) {
+            detailBadge.innerText = 'NEEDS REVIEW';
+            detailBadge.className = 'px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#FEF8E8] text-[#7A570C] border border-[#F8E5B8]';
+            detailCte.innerText = 'CTE-T-4920 (Batch Splitting)';
+            detailRef.innerText = 'FSMA Subpart S - Traceability Plan 2026';
+            detailStatus.innerText = 'Secondary Supplier Verification Pending';
+          } else {
+            detailBadge.innerText = 'RECORD VERIFIED';
+            detailBadge.className = 'px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#EEF6F2] text-[#245842] border border-[#CFE5DB]';
+            detailCte.innerText = 'CTE-R-8801 (Initial Harvest & Pack)';
+            detailRef.innerText = 'FSMA Section 204 Compliant Ledger';
+            detailStatus.innerText = 'Clean Trace Completed';
+          }
+        });
+      });
+    });
+  </script>
+</div></main></div></body></html>
